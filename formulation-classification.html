@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulation Classification — IP-SAKTI Sahayak</title>
+  <meta name="description" content="AI-assisted classification of Ayurvedic formulations, assessing traditional knowledge risk, Section 3(p) prior art, and IP pathways.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="formulation-classification.css">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- Global Left Sidebar -->
+    <aside class="app-sidebar" id="app-sidebar" aria-label="Main Navigation">
+      <div class="sidebar-header">
+        <div class="brand-emblem-wrap">
+          <img src="assets/logo.jpg" alt="IP-SAKTI Sahayak Emblem" class="brand-emblem-img">
+        </div>
+        <div class="brand-titles">
+          <span class="brand-name">IP-SAKTI</span>
+          <span class="brand-name" style="color: #A3D9B8; font-size: 1.05rem; margin-top: -2px;">Sahayak</span>
+          <span class="brand-subtitle" data-i18n="brand_subtitle">Ayurveda • IP • Regulation</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-group">
+          <div class="nav-group-title" data-i18n="nav_core_copilot">CORE CO-PILOT</div>
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-item-link"><svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><span data-i18n="nav_home">Home</span></a></li>
+            <li><a href="ai-assistant.html" class="nav-item-link"><svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg><span data-i18n="nav_ai_assistant">AI Assistant</span></a></li>
+            <li><a href="formulation-classification.html" class="nav-item-link active"><svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31M14 2v7.31M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"></path><path d="M5.52 16h12.96"></path></svg><span data-i18n="nav_formulation">Formulation Classification</span></a></li>
+            <li><a href="ip-regulatory-guidance.html" class="nav-item-link"><svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg><span data-i18n="nav_ip_guidance">IP + Regulatory Guidance</span></a></li>
+            <li><a href="abs-compliance.html" class="nav-item-link"><svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg><span data-i18n="nav_abs">ABS Compliance</span></a></li>
+          </ul>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-title" data-i18n="nav_knowledge_repos">KNOWLEDGE REPOSITORIES</div>
+          <ul class="nav-list">
+            <li><a href="tkdl-prior-art.html" class="nav-item-link"><svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span data-i18n="nav_tkdl">TKDL / Prior Art</span></a></li>
+            <li><a href="knowledge-corpus.html" class="nav-item-link"><svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg><span data-i18n="nav_corpus">Knowledge Corpus</span></a></li>
+            <li><a href="knowledge-graph.html" class="nav-item-link"><svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"></circle><circle cx="18" cy="18" r="3"></circle><line x1="8.5" y1="7.5" x2="15.5" y2="16.5"></line></svg><span data-i18n="nav_graph">Knowledge Graph</span></a></li>
+          </ul>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-title" data-i18n="nav_agentic">AGENTIC &amp; EVIDENCE</div>
+          <ul class="nav-list">
+            <li><a href="agentic-analysis.html" class="nav-item-link"><svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline></svg><span data-i18n="nav_agentic_analysis">Agentic Analysis</span></a></li>
+            <li><a href="sources-citations.html" class="nav-item-link"><svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg><span data-i18n="nav_sources">Sources &amp; Citations</span></a></li>
+          </ul>
+        </div>
+
+        <div class="nav-group">
+          <div class="nav-group-title" data-i18n="nav_governance">GOVERNANCE &amp; QUALITY</div>
+          <ul class="nav-list">
+            <li><a href="human-expert.html" class="nav-item-link"><svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg><span data-i18n="nav_human_expert">Human Expert</span></a></li>
+            <li><a href="privacy-security.html" class="nav-item-link"><svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg><span data-i18n="nav_privacy">Privacy &amp; Security</span></a></li>
+            <li><a href="evaluation.html" class="nav-item-link"><svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg><span data-i18n="nav_evaluation">Evaluation</span></a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="sidebar-botanical-art">
+        <svg width="140" height="95" viewBox="0 0 140 95" fill="none" stroke="currentColor">
+          <path d="M10 90 C35 70, 60 48, 125 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M125 15 C136 10, 138 20, 128 26 C118 32, 114 22, 125 15 Z" fill="currentColor" opacity="0.85"/>
+          <path d="M105 28 C120 18, 128 26, 118 36 C108 46, 98 34, 105 28 Z" fill="currentColor" opacity="0.8"/>
+          <path d="M96 36 C90 20, 102 14, 110 24 C118 34, 104 42, 96 36 Z" fill="currentColor" opacity="0.75"/>
+          <path d="M78 48 C95 38, 104 48, 92 58 C80 68, 70 56, 78 48 Z" fill="currentColor" opacity="0.8"/>
+          <path d="M68 56 C62 40, 74 32, 84 42 C94 52, 78 64, 68 56 Z" fill="currentColor" opacity="0.75"/>
+          <path d="M50 68 C68 60, 75 70, 63 80 C51 90, 42 76, 50 68 Z" fill="currentColor" opacity="0.75"/>
+          <path d="M40 76 C34 60, 46 52, 56 62 C66 72, 48 84, 40 76 Z" fill="currentColor" opacity="0.7"/>
+        </svg>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="privacy-security.html" class="dpdp-badge-btn">
+          <div class="dpdp-badge-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span data-i18n="sidebar_dpdp">DPDP-Aligned Prototype</span>
+          </div>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        </a>
+        <p class="sidebar-legal-disclaimer" data-i18n="sidebar_legal_disclaimer">
+          This information is provided for informational and educational purposes only and does not constitute legal advice.
+        </p>
+      </div>
+    </aside>
+
+    <!-- Main Viewport -->
+    <main class="main-viewport">
+      
+      <!-- Top Header Navigation -->
+      <header class="top-header">
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+
+        <div class="header-search-wrap">
+          <div class="search-input-box">
+            <svg width="16" height="16" class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" class="search-input" id="global-search-input" placeholder="Ask about Ayurveda IP, regulation or compliance..." data-i18n-placeholder="search_placeholder">
+            <button class="search-clear-btn" id="search-clear-btn" aria-label="Clear Search"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+          </div>
+          <div class="search-results-dropdown" id="global-search-results"></div>
+        </div>
+
+        <div class="header-actions-right">
+          <!-- Language Selector -->
+          <div class="lang-dropdown-wrap">
+            <button class="lang-btn" id="lang-menu-btn" aria-haspopup="true" aria-expanded="false">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <span id="current-lang-name">English</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="lang-dropdown-menu" id="lang-dropdown-menu">
+              <button class="lang-option-btn active" data-lang="en">English <span>EN</span></button>
+              <button class="lang-option-btn" data-lang="hi">हिन्दी <span>HI</span></button>
+              <button class="lang-option-btn" data-lang="mr">मराठी <span>MR</span></button>
+              <button class="lang-option-btn" data-lang="gu">ગુજરાતી <span>GU</span></button>
+              <button class="lang-option-btn" data-lang="ta">தமிழ் <span>TA</span></button>
+              <button class="lang-option-btn" data-lang="te">తెలుగు <span>TE</span></button>
+              <button class="lang-option-btn" data-lang="bn">বাংলা <span>BN</span></button>
+              <button class="lang-option-btn" data-lang="kn">ಕನ್ನಡ <span>KN</span></button>
+              <button class="lang-option-btn" data-lang="ml">മലയാളം <span>ML</span></button>
+              <button class="lang-option-btn" data-lang="pa">ਪੰਜਾਬੀ <span>PA</span></button>
+              <button class="lang-option-btn" data-lang="or">ଓଡ଼ିଆ <span>OR</span></button>
+              <button class="lang-option-btn" data-lang="as">অসমীয়া <span>AS</span></button>
+              <button class="lang-option-btn" data-lang="ur">اردو <span>UR</span></button>
+              <button class="lang-option-btn" data-lang="sa">संस्कृतम् <span>SA</span></button>
+            </div>
+          </div>
+
+          <!-- Voice Mic Button -->
+          <button class="voice-mic-btn" id="header-voice-btn" title="Voice Assistant (Click to speak)" aria-label="Start Voice Input">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+          </button>
+
+          <!-- Jurisdiction Selector -->
+          <div class="jurisdiction-toggle-wrap" role="radiogroup" aria-label="Jurisdiction Selector">
+            <button class="jurisdiction-btn active" id="btn-jurisdiction-india" data-jurisdiction="india" aria-checked="true" role="radio">
+              <span>🇮🇳</span>
+              <span data-i18n="jurisdiction_india">India</span>
+            </button>
+            <button class="jurisdiction-btn" id="btn-jurisdiction-intl" data-jurisdiction="international" aria-checked="false" role="radio">
+              <span>🌐</span>
+              <span data-i18n="jurisdiction_intl">International</span>
+            </button>
+          </div>
+
+          <!-- Notifications -->
+          <div style="position: relative;">
+            <button class="header-icon-btn" id="notification-bell-btn" aria-label="View Notifications">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+              <span class="badge-count">1</span>
+            </button>
+            <div class="lang-dropdown-menu" id="notifications-menu" style="min-width: 280px; right: 0;">
+              <div style="padding: 8px 12px; font-weight: 700; font-size: 0.82rem; border-bottom: 1px solid var(--border-subtle); color: var(--color-primary);" data-i18n="notif_title">Regulatory Alerts</div>
+              <div style="padding: 10px 12px; font-size: 0.8rem; border-bottom: 1px solid var(--border-subtle);">
+                <div style="font-weight: 600; color: var(--color-primary);" data-i18n="notif_item1_title">Gazette Update: Rule 158B</div>
+                <div style="color: var(--text-secondary); margin-top: 2px;" data-i18n="notif_item1_sub">Ministry of AYUSH updated evidence requirements for classical formulations.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile -->
+          <div class="profile-badge-btn">
+            <div class="profile-avatar">R</div>
+            <span class="profile-name" data-i18n="profile_user">Researcher</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content: Formulation Classification -->
+      <div class="page-content-wrapper">
+        
+        <div class="page-header-banner">
+          <div class="page-header-text">
+            <span class="page-badge" data-i18n="badge_formulation">Patentability &amp; Regulatory Pre-Check</span>
+            <h1 class="page-title">Ayurvedic Formulation Classifier</h1>
+            <p class="page-desc">
+              Evaluate your formulation composition, traditional knowledge exposure, Section 3(p) non-patentability risk, and regulatory licensing pathway under Rule 158B.
+            </p>
+          </div>
+        </div>
+
+        <div class="contextual-disclaimer-banner">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          <span>
+            This is an informational prototype assessment and not legal advice. Formal novelty and freedom-to-operate require certified patent agent drafting.
+          </span>
+        </div>
+
+        <div class="formulation-view-grid">
+          
+          <!-- Input Form Panel -->
+          <div class="form-panel-card">
+            <h3 style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 18px; color: var(--color-primary);">
+              Formulation Parameters
+            </h3>
+
+            <div class="form-group">
+              <label class="form-label" for="formulation-name">Formulation Name / Code</label>
+              <input type="text" id="formulation-name" class="form-input" placeholder="e.g. Ashwagandha-Ghrita Synergy Compound" value="Ashwagandha-Brahmi Neuro-Cognitive Extract">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formulation-ingredients">Botanical Ingredients (Botanical Names &amp; Proportions)</label>
+              <textarea id="formulation-ingredients" class="form-textarea" rows="2" placeholder="e.g. Withania somnifera, Bacopa monnieri, Piper longum">Withania somnifera (Ashwagandha, 40%), Bacopa monnieri (Brahmi, 35%), Piper nigrum (Maricha, 5%), Cow Ghee (Ghrita base, 20%)</textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formulation-source">Plant / Biological Source Origin</label>
+              <input type="text" id="formulation-source" class="form-input" placeholder="e.g. Wild harvested roots from Madhya Pradesh, India" value="Wild harvested roots from Madhya Pradesh forest region, India">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formulation-method">Preparation Method</label>
+              <textarea id="formulation-method" class="form-textarea" rows="2" placeholder="e.g. Traditional Sneha Kalpana vs Supercritical CO2 Extraction">Standardized hydro-alcoholic co-extraction followed by lipid infusion in medicated cow ghee at 65°C for 8 hours</textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="formulation-use">Intended Therapeutic / Health Use</label>
+              <input type="text" id="formulation-use" class="form-input" placeholder="e.g. Cognitive enhancement and neuro-protection" value="Cognitive enhancement, stress reduction, memory revitalization (Medhya Rasayana)">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Documented in Classical Ayurvedic Texts?</label>
+              <div class="form-radio-row">
+                <label class="radio-label">
+                  <input type="radio" name="tk_indicator" value="yes" checked>
+                  <span>Yes (Charaka, Sushruta, Astanga Hridaya, etc.)</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="tk_indicator" value="no">
+                  <span>No (Entirely Novel Formulation)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Novelty &amp; Inventive Step Claim</label>
+              <select id="formulation-novelty" class="form-select">
+                <option value="modified_synergy" selected>Modified Synergy / Enhanced Bioavailability (Bio-enhancer ratio)</option>
+                <option value="traditional_classical">Classical Traditional Formulation (Exact classical recipe)</option>
+                <option value="novel_fraction">Novel Isolated Active Fraction / Phytopharmaceutical</option>
+                <option value="novel_delivery">Novel Drug Delivery System (Nano-liposomal, Phytosome)</option>
+              </select>
+            </div>
+
+            <button class="btn-primary-pill" id="btn-analyze-formulation" style="width: 100%; justify-content: center; margin-top: 10px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <span>Analyze Formulation</span>
+            </button>
+          </div>
+
+          <!-- Output Analysis Results Panel -->
+          <div class="results-panel-card" id="formulation-result-container">
+            
+            <div class="results-header-box">
+              <div class="classification-tag-badge traditional" id="res-classification-badge">
+                Traditional Formulation with Synergistic Bio-enhancement
+              </div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-primary); margin-bottom: 6px;" id="res-formulation-title">
+                Ashwagandha-Brahmi Neuro-Cognitive Extract
+              </h3>
+              <p style="font-size: 0.84rem; color: var(--text-secondary);" id="res-formulation-summary">
+                Assessed against Indian Patents Act (Sec 3(p)), Rule 158B Drugs &amp; Cosmetics Act, and Biological Diversity Act. Origin: Madhya Pradesh
+              </p>
+            </div>
+
+            <div class="result-metric-grid">
+              <div class="result-metric-box">
+                <div class="metric-box-title">Traditional Knowledge Risk</div>
+                <div class="metric-box-val"><span class="risk-pill high" id="res-tk-risk">High (Component Treatises Found)</span></div>
+              </div>
+              <div class="result-metric-box">
+                <div class="metric-box-title">Prior-Art Risk</div>
+                <div class="metric-box-val"><span class="risk-pill medium" id="res-prior-art-risk">Medium (Novel Ratio/Bioavailability)</span></div>
+              </div>
+              <div class="result-metric-box">
+                <div class="metric-box-title">Potential IP Route</div>
+                <div class="metric-box-val" id="res-ip-path" style="font-size: 0.88rem;">Process patent &amp; synergistic composition (Requires CI data)</div>
+              </div>
+              <div class="result-metric-box">
+                <div class="metric-box-title">Analysis Confidence</div>
+                <div class="metric-box-val" id="res-confidence-val" style="color: var(--color-primary);">87%</div>
+              </div>
+            </div>
+
+            <div style="background: #F9FAF7; border: 1px solid var(--border-light); border-radius: var(--border-radius-md); padding: 16px; margin-bottom: 16px;">
+              <h4 style="font-size: 0.86rem; font-weight: 700; color: var(--color-primary); margin-bottom: 6px;">
+                Regulatory Considerations &amp; Licensing:
+              </h4>
+              <p style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;" id="res-regulatory-notes">
+                Requires proving supra-additive therapeutic index over individual ingredients to overcome Section 3(e) &amp; 3(p). Biological Diversity Act (Form I or III) clearance is mandatory.
+              </p>
+            </div>
+
+            <div style="margin-top: auto; display: flex; gap: 10px;">
+              <button class="btn-primary-pill" style="flex: 1; justify-content: center; font-size: 0.84rem; padding: 10px;" id="btn-export-classification">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span>Export Assessment Summary</span>
+              </button>
+              <a href="human-expert.html" class="btn-secondary-pill" style="font-size: 0.84rem; padding: 10px 16px;">
+                <span>Escalate to Expert</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="common.js"></script>
+  <script src="formulation-classification.js"></script>
+</body>
+</html>

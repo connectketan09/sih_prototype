@@ -1,0 +1,117 @@
+/* ==========================================================================
+   Page Styles: tkdl-prior-art.css
+   ========================================================================== */
+@import url('common.css');
+
+.search-filter-toolbar {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-xl);
+  padding: 20px 24px;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filter-pills-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-select {
+  padding: 6px 14px;
+  border-radius: var(--border-radius-full);
+  border: 1px solid var(--border-light);
+  background: var(--bg-app);
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.filter-select:focus {
+  border-color: var(--color-primary);
+  background: #FFFFFF;
+}
+
+.tkdl-results-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.tkdl-result-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-lg);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-speed);
+}
+
+.tkdl-result-card:hover {
+  border-color: var(--color-sage);
+  box-shadow: var(--shadow-md);
+}
+
+.tkdl-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.tkdl-ref-id {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  padding: 3px 10px;
+  border-radius: var(--border-radius-sm);
+}
+
+.tkdl-similarity-badge {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: #EDF7F1;
+  border: 1px solid #C4E8D4;
+  padding: 3px 10px;
+  border-radius: var(--border-radius-full);
+}
+
+.tkdl-source-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.tkdl-source-ancient {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-accent-gold);
+  margin-bottom: 8px;
+}
+
+.tkdl-details-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  background: var(--bg-app);
+  padding: 10px 14px;
+  border-radius: var(--border-radius-md);
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .tkdl-details-row {
+    grid-template-columns: 1fr;
+  }
+}

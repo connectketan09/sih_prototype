@@ -1,0 +1,43 @@
+# ============================================================
+# Git Ignore — api_backend
+# ============================================================
+
+# Environment Variables — NEVER commit this
+.env
+.env.*
+!.env.example
+
+# Python virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyc
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# IDE and OS artifacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Test coverage
+.coverage
+htmlcov/

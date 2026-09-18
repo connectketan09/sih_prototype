@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IP-SAKTI Sahayak — Multilingual AI for Ayurvedic IP &amp; Regulatory Guidance</title>
+  <meta name="description" content="AI Assistant for Ayurveda Intellectual Property, Traditional Knowledge (TKDL), and Regulatory Guidance. Multilingual, source-cited, DPDP-aligned prototype.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- Global Left Sidebar -->
+    <aside class="app-sidebar" id="app-sidebar" aria-label="Main Navigation">
+      <div class="sidebar-header">
+        <div class="brand-emblem-wrap">
+          <img src="assets/logo.jpg" alt="IP-SAKTI Sahayak Emblem" class="brand-emblem-img">
+        </div>
+        <div class="brand-titles">
+          <span class="brand-name">IP-SAKTI</span>
+          <span class="brand-name" style="color: #A3D9B8; font-size: 1.05rem; margin-top: -2px;">Sahayak</span>
+          <span class="brand-subtitle" data-i18n="brand_subtitle">Ayurveda • IP • Regulation</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <!-- CORE CO-PILOT -->
+        <div class="nav-group">
+          <div class="nav-group-title" data-i18n="nav_core_copilot">CORE CO-PILOT</div>
+          <ul class="nav-list">
+            <li>
+              <a href="index.html" class="nav-item-link active">
+                <svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                <span data-i18n="nav_home">Home</span>
+              </a>
+            </li>
+            <li>
+              <a href="ai-assistant.html" class="nav-item-link">
+                <svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <span data-i18n="nav_ai_assistant">AI Assistant</span>
+              </a>
+            </li>
+            <li>
+              <a href="formulation-classification.html" class="nav-item-link">
+                <svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31M14 2v7.31M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"></path><path d="M5.52 16h12.96"></path></svg>
+                <span data-i18n="nav_formulation">Formulation Classification</span>
+              </a>
+            </li>
+            <li>
+              <a href="ip-regulatory-guidance.html" class="nav-item-link">
+                <svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span data-i18n="nav_ip_guidance">IP + Regulatory Guidance</span>
+              </a>
+            </li>
+            <li>
+              <a href="abs-compliance.html" class="nav-item-link">
+                <svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                <span data-i18n="nav_abs">ABS Compliance</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- KNOWLEDGE REPOSITORIES -->
+        <div class="nav-group">
+          <div class="nav-group-title" data-i18n="nav_knowledge_repos">KNOWLEDGE REPOSITORIES</div>
+          <ul class="nav-list">
+            <li>
+              <a href="tkdl-prior-art.html" class="nav-item-link">
+                <svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span data-i18n="nav_tkdl">TKDL / Prior Art</span>
+              </a>
+            </li>
+            <li>
+              <a href="knowledge-corpus.html" class="nav-item-link">
+                <svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                <span data-i18n="nav_corpus">Knowledge Corpus</span>
+              </a>
+            </li>
+            <li>
+              <a href="knowledge-graph.html" class="nav-item-link">
+                <svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"></circle><circle cx="18" cy="18" r="3"></circle><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="8.5" y1="7.5" x2="15.5" y2="16.5"></line><line x1="8.5" y1="16.5" x2="15.5" y2="7.5"></line></svg>
+                <span data-i18n="nav_graph">Knowledge Graph</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- AGENTIC & EVIDENCE -->
+        <div class="nav-group">
+          <div class="nav-group-title" data-i18n="nav_agentic">AGENTIC &amp; EVIDENCE</div>
+          <ul class="nav-list">
+            <li>
+              <a href="agentic-analysis.html" class="nav-item-link">
+                <svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                <span data-i18n="nav_agentic_analysis">Agentic Analysis</span>
+              </a>
+            </li>
+            <li>
+              <a href="sources-citations.html" class="nav-item-link">
+                <svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                <span data-i18n="nav_sources">Sources &amp; Citations</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- GOVERNANCE & QUALITY -->
+        <div class="nav-group">
+          <div class="nav-group-title" data-i18n="nav_governance">GOVERNANCE &amp; QUALITY</div>
+          <ul class="nav-list">
+            <li>
+              <a href="human-expert.html" class="nav-item-link">
+                <svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path></svg>
+                <span data-i18n="nav_human_expert">Human Expert</span>
+              </a>
+            </li>
+            <li>
+              <a href="privacy-security.html" class="nav-item-link">
+                <svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span data-i18n="nav_privacy">Privacy &amp; Security</span>
+              </a>
+            </li>
+            <li>
+              <a href="evaluation.html" class="nav-item-link">
+                <svg width="18" height="18" class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                <span data-i18n="nav_evaluation">Evaluation</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="sidebar-botanical-art">
+        <svg width="140" height="95" viewBox="0 0 140 95" fill="none" stroke="currentColor">
+          <path d="M10 90 C35 70, 60 48, 125 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M125 15 C136 10, 138 20, 128 26 C118 32, 114 22, 125 15 Z" fill="currentColor" opacity="0.85"/>
+          <path d="M105 28 C120 18, 128 26, 118 36 C108 46, 98 34, 105 28 Z" fill="currentColor" opacity="0.8"/>
+          <path d="M96 36 C90 20, 102 14, 110 24 C118 34, 104 42, 96 36 Z" fill="currentColor" opacity="0.75"/>
+          <path d="M78 48 C95 38, 104 48, 92 58 C80 68, 70 56, 78 48 Z" fill="currentColor" opacity="0.8"/>
+          <path d="M68 56 C62 40, 74 32, 84 42 C94 52, 78 64, 68 56 Z" fill="currentColor" opacity="0.75"/>
+          <path d="M50 68 C68 60, 75 70, 63 80 C51 90, 42 76, 50 68 Z" fill="currentColor" opacity="0.75"/>
+          <path d="M40 76 C34 60, 46 52, 56 62 C66 72, 48 84, 40 76 Z" fill="currentColor" opacity="0.7"/>
+        </svg>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="privacy-security.html" class="dpdp-badge-btn">
+          <div class="dpdp-badge-left">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            <span data-i18n="sidebar_dpdp">DPDP-Aligned Prototype</span>
+          </div>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+        </a>
+        <p class="sidebar-legal-disclaimer" data-i18n="sidebar_legal_disclaimer">
+          This information is provided for informational and educational purposes only and does not constitute legal advice.
+        </p>
+      </div>
+    </aside>
+
+    <!-- Main Viewport -->
+    <main class="main-viewport">
+      
+      <!-- Top Navigation Bar -->
+      <header class="top-header">
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+
+        <div class="header-search-wrap">
+          <div class="search-input-box">
+            <svg width="16" height="16" class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" class="search-input" id="global-search-input" placeholder="Ask about Ayurveda IP, regulation or compliance..." data-i18n-placeholder="search_placeholder">
+            <button class="search-clear-btn" id="search-clear-btn" aria-label="Clear Search">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+          </div>
+          <div class="search-results-dropdown" id="global-search-results"></div>
+        </div>
+
+        <div class="header-actions-right">
+          <!-- Language Selector -->
+          <div class="lang-dropdown-wrap">
+            <button class="lang-btn" id="lang-menu-btn" aria-haspopup="true" aria-expanded="false">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <span id="current-lang-name">English</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="lang-dropdown-menu" id="lang-dropdown-menu">
+              <button class="lang-option-btn active" data-lang="en">English <span>EN</span></button>
+              <button class="lang-option-btn" data-lang="hi">हिन्दी <span>HI</span></button>
+              <button class="lang-option-btn" data-lang="mr">मराठी <span>MR</span></button>
+              <button class="lang-option-btn" data-lang="gu">ગુજરાતી <span>GU</span></button>
+              <button class="lang-option-btn" data-lang="ta">தமிழ் <span>TA</span></button>
+              <button class="lang-option-btn" data-lang="te">తెలుగు <span>TE</span></button>
+              <button class="lang-option-btn" data-lang="bn">বাংলা <span>BN</span></button>
+              <button class="lang-option-btn" data-lang="kn">ಕನ್ನಡ <span>KN</span></button>
+              <button class="lang-option-btn" data-lang="ml">മലയാളം <span>ML</span></button>
+              <button class="lang-option-btn" data-lang="pa">ਪੰਜਾਬੀ <span>PA</span></button>
+              <button class="lang-option-btn" data-lang="or">ଓଡ଼ିଆ <span>OR</span></button>
+              <button class="lang-option-btn" data-lang="as">অসমীয়া <span>AS</span></button>
+              <button class="lang-option-btn" data-lang="ur">اردو <span>UR</span></button>
+              <button class="lang-option-btn" data-lang="sa">संस्कृतम् <span>SA</span></button>
+            </div>
+          </div>
+
+          <!-- Voice Assistant Button -->
+          <button class="voice-mic-btn" id="header-voice-btn" title="Voice Assistant (Click to speak)" aria-label="Start Voice Input">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+          </button>
+
+          <!-- Jurisdiction Selector -->
+          <div class="jurisdiction-toggle-wrap" role="radiogroup" aria-label="Jurisdiction Selector">
+            <button class="jurisdiction-btn active" id="btn-jurisdiction-india" data-jurisdiction="india" aria-checked="true" role="radio">
+              <span>🇮🇳</span>
+              <span data-i18n="jurisdiction_india">India</span>
+            </button>
+            <button class="jurisdiction-btn" id="btn-jurisdiction-intl" data-jurisdiction="international" aria-checked="false" role="radio">
+              <span>🌐</span>
+              <span data-i18n="jurisdiction_intl">International</span>
+            </button>
+          </div>
+
+          <!-- Notification Bell -->
+          <div style="position: relative;">
+            <button class="header-icon-btn" id="notification-bell-btn" aria-label="View Notifications">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+              <span class="badge-count">1</span>
+            </button>
+            <div class="lang-dropdown-menu" id="notifications-menu" style="min-width: 280px; right: 0;">
+              <div style="padding: 8px 12px; font-weight: 700; font-size: 0.82rem; border-bottom: 1px solid var(--border-subtle); color: var(--color-primary);" data-i18n="notif_title">
+                Regulatory Alerts
+              </div>
+              <div style="padding: 10px 12px; font-size: 0.8rem; border-bottom: 1px solid var(--border-subtle);">
+                <div style="font-weight: 600; color: var(--color-primary);" data-i18n="notif_item1_title">Gazette Update: Rule 158B</div>
+                <div style="color: var(--text-secondary); margin-top: 2px;" data-i18n="notif_item1_sub">Ministry of AYUSH updated evidence requirements for classical formulations.</div>
+                <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 4px;">Today, 10:30 AM</div>
+              </div>
+              <div style="padding: 8px 12px; text-align: center;">
+                <button style="font-size: 0.76rem; color: var(--color-primary); font-weight: 600;" id="mark-all-read-btn" data-i18n="notif_mark_read">Mark all as read</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Profile -->
+          <div class="profile-badge-btn">
+            <div class="profile-avatar">R</div>
+            <span class="profile-name" data-i18n="profile_user">Researcher</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <div class="page-content-wrapper">
+        <div class="dashboard-grid-layout">
+          
+          <!-- Top Section: Hero Card + Quick Insights -->
+          <div class="dashboard-top-section">
+            
+            <div class="hero-card">
+              <span class="hero-welcome-tag" data-i18n="hero_welcome">Welcome to</span>
+              <h1 class="hero-title">IP-SAKTI Sahayak</h1>
+              <h2 class="hero-subtitle" data-i18n="hero_heading">
+                Your AI Assistant for<br>
+                Ayurveda IP &amp; Regulatory Guidance
+              </h2>
+              <div>
+                <span class="hero-subscript-badge" data-i18n="hero_wisdom_tag">Ancient Wisdom Meets Modern Intelligence</span>
+              </div>
+              <p class="hero-desc" data-i18n="hero_desc">
+                Get multilingual, source-cited guidance on intellectual property, traditional knowledge and regulatory requirements.
+              </p>
+              <div class="hero-actions-row">
+                <a href="ai-assistant.html" class="btn-primary-pill">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                  <span data-i18n="btn_ask_ipsakti">Ask IP-SAKTI</span>
+                  <span>&rarr;</span>
+                </a>
+                <a href="formulation-classification.html" class="btn-secondary-pill">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31M14 2v7.31M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"></path></svg>
+                  <span data-i18n="btn_classify_formulation">Classify Formulation</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Quick Insights Card -->
+            <div class="quick-insights-card">
+              <div class="insights-card-header">
+                <h3 class="insights-card-title" data-i18n="insights_title">Quick Insights</h3>
+                <svg width="24" height="24" class="insights-leaf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 4 9 9 10 1-1 2-3 2-5 0-3-2-5-2-8 3 0 5 2 8 2 2 0 4-1 5-2-1-5-5-9-10-9z"></path></svg>
+              </div>
+
+              <div class="insights-metrics-list">
+                <div class="insight-metric-item">
+                  <div class="metric-icon-wrap">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                  </div>
+                  <div class="metric-text-wrap">
+                    <span class="metric-label" data-i18n="metric_sources_label">Total Sources</span>
+                    <span class="metric-value">1,248+</span>
+                  </div>
+                </div>
+
+                <div class="insight-metric-item">
+                  <div class="metric-icon-wrap">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                  </div>
+                  <div class="metric-text-wrap">
+                    <span class="metric-label" data-i18n="metric_areas_label">Knowledge Areas</span>
+                    <span class="metric-value">12+</span>
+                  </div>
+                </div>
+
+                <div class="insight-metric-item">
+                  <div class="metric-icon-wrap">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                  </div>
+                  <div class="metric-text-wrap">
+                    <span class="metric-label" data-i18n="metric_langs_label">Languages Supported</span>
+                    <span class="metric-value">7</span>
+                  </div>
+                </div>
+
+                <div class="insight-metric-item">
+                  <div class="metric-icon-wrap">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div class="metric-text-wrap">
+                    <span class="metric-label" data-i18n="metric_jurisdiction_label">Jurisdiction</span>
+                    <span class="metric-value" id="dashboard-jurisdiction-indicator" data-i18n="metric_jurisdiction_val">India + International</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="insight-quote-banner">
+                <span class="quote-leaf">&ldquo;</span>
+                <span data-i18n="quote_text">Empowering innovation in Ayurveda through intellectual property and regulatory excellence.</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Feature Capability Badges Bar -->
+          <div class="feature-badges-bar">
+            <div class="feature-badge-pill">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+              <span data-i18n="badge_multilingual">Multilingual</span>
+            </div>
+            <div class="feature-badge-pill">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon></svg>
+              <span data-i18n="badge_rag">RAG Powered</span>
+            </div>
+            <div class="feature-badge-pill">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg>
+              <span data-i18n="badge_source_cited">Source Cited</span>
+            </div>
+            <div class="feature-badge-pill">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="2" x2="12" y2="22"></line></svg>
+              <span data-i18n="badge_dual_jurisdiction">India + International</span>
+            </div>
+            <div class="feature-badge-pill">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"></circle><circle cx="18" cy="18" r="3"></circle><line x1="8.5" y1="7.5" x2="15.5" y2="16.5"></line></svg>
+              <span data-i18n="badge_kg">Knowledge Graph</span>
+            </div>
+          </div>
+
+          <!-- 6 Main Action Cards Grid -->
+          <div class="action-cards-grid">
+            <!-- Card 1: AI Assistant -->
+            <a href="ai-assistant.html" class="action-card">
+              <div class="action-card-top">
+                <div class="action-card-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                </div>
+                <div class="action-card-decor-art">
+                  <svg height="20" width="20" viewBox="0 0 60 60" fill="currentColor"><path d="M20 50 C10 30 30 10 50 10 C50 30 30 50 20 50 Z" fill="#4E8A66"></path></svg>
+                </div>
+              </div>
+              <div class="action-card-body">
+                <h3 class="action-card-title" data-i18n="card_ai_title">AI Assistant</h3>
+                <p class="action-card-desc" data-i18n="card_ai_desc">Ask questions and get source-cited guidance on IP, TK and AYUSH compliance.</p>
+              </div>
+              <div class="action-card-footer">
+                <div class="action-card-arrow-btn">&rarr;</div>
+              </div>
+            </a>
+
+            <!-- Card 2: Formulation Classification -->
+            <a href="formulation-classification.html" class="action-card">
+              <div class="action-card-top">
+                <div class="action-card-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31M14 2v7.31M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"></path></svg>
+                </div>
+                <div class="action-card-decor-art">
+                  <svg height="20" width="20" viewBox="0 0 60 60" fill="currentColor"><path d="M15 45 C15 25 35 15 45 15 C45 35 25 45 15 45 Z" fill="#C59B38"></path></svg>
+                </div>
+              </div>
+              <div class="action-card-body">
+                <h3 class="action-card-title" data-i18n="card_formulation_title">Formulation Classification</h3>
+                <p class="action-card-desc" data-i18n="card_formulation_desc">Classify your formulation with AI assistance into classical or novel IP pathways.</p>
+              </div>
+              <div class="action-card-footer">
+                <div class="action-card-arrow-btn">&rarr;</div>
+              </div>
+            </a>
+
+            <!-- Card 3: IP + Regulatory Guidance -->
+            <a href="ip-regulatory-guidance.html" class="action-card">
+              <div class="action-card-top">
+                <div class="action-card-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                </div>
+                <div class="action-card-decor-art">
+                  <svg height="20" width="20" viewBox="0 0 60 60" fill="currentColor"><circle cx="30" cy="30" r="18" fill="#4E8A66"></circle></svg>
+                </div>
+              </div>
+              <div class="action-card-body">
+                <h3 class="action-card-title" data-i18n="card_ip_title">IP + Regulatory Guidance</h3>
+                <p class="action-card-desc" data-i18n="card_ip_desc">Get guidance on IP rights (patents, GI, trademark) and regulatory requirements.</p>
+              </div>
+              <div class="action-card-footer">
+                <div class="action-card-arrow-btn">&rarr;</div>
+              </div>
+            </a>
+
+            <!-- Card 4: ABS Compliance -->
+            <a href="abs-compliance.html" class="action-card">
+              <div class="action-card-top">
+                <div class="action-card-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                </div>
+                <div class="action-card-decor-art">
+                  <svg height="20" width="20" viewBox="0 0 60 60" fill="currentColor"><path d="M10 50 C25 20 45 20 50 40 Z" fill="#2E7D52"></path></svg>
+                </div>
+              </div>
+              <div class="action-card-body">
+                <h3 class="action-card-title" data-i18n="card_abs_title">ABS Compliance</h3>
+                <p class="action-card-desc" data-i18n="card_abs_desc">Check access and benefit sharing requirements under Biological Diversity Act.</p>
+              </div>
+              <div class="action-card-footer">
+                <div class="action-card-arrow-btn">&rarr;</div>
+              </div>
+            </a>
+
+            <!-- Card 5: TKDL / Prior Art -->
+            <a href="tkdl-prior-art.html" class="action-card">
+              <div class="action-card-top">
+                <div class="action-card-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </div>
+                <div class="action-card-decor-art">
+                  <svg height="20" width="20" viewBox="0 0 60 60" fill="currentColor"><rect x="15" y="15" width="30" height="30" rx="6" fill="#C59B38"></rect></svg>
+                </div>
+              </div>
+              <div class="action-card-body">
+                <h3 class="action-card-title" data-i18n="card_tkdl_title">TKDL / Prior Art</h3>
+                <p class="action-card-desc" data-i18n="card_tkdl_desc">Search traditional knowledge repositories and prior art references.</p>
+              </div>
+              <div class="action-card-footer">
+                <div class="action-card-arrow-btn">&rarr;</div>
+              </div>
+            </a>
+
+            <!-- Card 6: Knowledge Corpus -->
+            <a href="knowledge-corpus.html" class="action-card">
+              <div class="action-card-top">
+                <div class="action-card-icon-wrap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                </div>
+                <div class="action-card-decor-art">
+                  <svg height="20" width="20" viewBox="0 0 60 60" fill="currentColor"><path d="M30 15 L45 45 L15 45 Z" fill="#4E8A66"></path></svg>
+                </div>
+              </div>
+              <div class="action-card-body">
+                <h3 class="action-card-title" data-i18n="card_corpus_title">Knowledge Corpus</h3>
+                <p class="action-card-desc" data-i18n="card_corpus_desc">Explore authoritative, version-tracked legal and regulatory sources.</p>
+              </div>
+              <div class="action-card-footer">
+                <div class="action-card-arrow-btn">&rarr;</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Recent Activity Card -->
+          <div class="recent-activity-card">
+            <div class="recent-activity-header">
+              <h3 class="recent-activity-title" data-i18n="recent_activity_title">Recent Activity</h3>
+              <a href="privacy-security.html" class="view-all-link">
+                <span data-i18n="view_all_link">View All</span> &rarr;
+              </a>
+            </div>
+            <div class="activity-list" id="dashboard-recent-activity-list"></div>
+          </div>
+
+          <!-- Botanical Footer Banner -->
+          <div class="dashboard-botanical-footer">
+            <svg height="20" width="20" class="botanical-footer-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.5 2 2 6.5 2 12c0 5 4 9 9 10 1-1 2-3 2-5 0-3-2-5-2-8 3 0 5 2 8 2 2 0 4-1 5-2-1-5-5-9-10-9z"></path>
+            </svg>
+            <div class="botanical-footer-text" data-i18n="footer_slogan">Traditional Knowledge | Modern Technology | A Sustainable Future</div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="common.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

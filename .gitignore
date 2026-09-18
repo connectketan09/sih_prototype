@@ -1,0 +1,41 @@
+# ============================================================
+# IP-SAKTI Sahayak — .gitignore
+# ============================================================
+
+# --- SECRETS (never commit) ---
+api_backend/.env
+*.env
+.env.*
+
+# --- Python virtualenv ---
+api_backend/venv/
+venv/
+env/
+.venv/
+
+# --- Python cache ---
+__pycache__/
+api_backend/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Node / npm (if used) ---
+node_modules/
+npm-debug.log*
+
+# --- Logs ---
+*.log

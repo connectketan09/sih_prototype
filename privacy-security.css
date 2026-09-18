@@ -1,0 +1,325 @@
+/* ==========================================================================
+   Page Styles: privacy-security.css
+   ========================================================================== */
+@import url('common.css');
+
+.btn-danger-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #C62828;
+  color: #FFFFFF;
+  border: 1px solid #B71C1C;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(198, 40, 40, 0.25);
+  transition: var(--transition-fast);
+}
+
+.btn-danger-pill:hover {
+  background: #B71C1C;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(198, 40, 40, 0.35);
+}
+
+/* 4 Metric Cards */
+.privacy-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.metric-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-xl);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.metric-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.metric-icon-wrap svg {
+  width: 22px;
+  height: 22px;
+}
+
+.metric-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.metric-title {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.metric-val {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+}
+
+.metric-note {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* DPDP Section */
+.dpdp-section-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-xl);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.dpdp-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.dpdp-section-header h3 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--color-primary-dark);
+  margin-top: 6px;
+}
+
+.disclaimer-chip {
+  font-size: 0.76rem;
+  color: #546E7A;
+  background: var(--bg-card);
+  border: 1px solid var(--color-sage-border);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.dpdp-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.dpdp-col {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-md);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dpdp-icon-pill {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.dpdp-col h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 6px;
+}
+
+.dpdp-col p {
+  font-size: 0.82rem;
+  color: #4A5568;
+  line-height: 1.5;
+}
+
+/* Consent Controls */
+.consent-controls-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-xl);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.consent-controls-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 4px;
+}
+
+.section-sub {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.toggles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.toggle-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-md);
+  gap: 16px;
+}
+
+.toggle-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.toggle-info strong {
+  font-size: 0.88rem;
+  color: var(--color-primary-dark);
+}
+
+.toggle-info span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Custom Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #CFD8DC;
+  transition: .3s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+input:checked + .slider {
+  background-color: var(--color-primary);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.consent-save-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Audit Log Table */
+.audit-log-section {
+  margin-bottom: 24px;
+}
+
+.audit-log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.audit-log-header h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 2px;
+}
+
+.audit-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-code-tag {
+  font-family: monospace;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  background: var(--bg-card);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--color-sage-border);
+}
+
+@media (max-width: 1024px) {
+  .privacy-metric-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dpdp-principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .privacy-metric-grid,
+  .dpdp-principles-grid {
+    grid-template-columns: 1fr;
+  }
+}

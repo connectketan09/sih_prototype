@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Page Styles: abs-compliance.css
+   ========================================================================== */
+@import url('common.css');
+
+.abs-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.checklist-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--bg-app);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-light);
+}
+
+.checklist-checkbox {
+  margin-top: 3px;
+  accent-color: var(--color-primary);
+  width: 17px;
+  height: 17px;
+}
+
+.checklist-text-title {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.checklist-text-sub {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .abs-grid-layout {
+    grid-template-columns: 1fr;
+  }
+}

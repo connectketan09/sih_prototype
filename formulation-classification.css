@@ -1,0 +1,160 @@
+/* ==========================================================================
+   Page Styles: formulation-classification.css
+   ========================================================================== */
+@import url('common.css');
+
+.formulation-view-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.form-panel-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-xl);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.form-input, .form-textarea, .form-select {
+  width: 100%;
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-md);
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  background: #FAFBF9;
+  color: var(--text-primary);
+  outline: none;
+  transition: all var(--transition-speed);
+}
+
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+  border-color: var(--color-primary);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(13, 59, 40, 0.08);
+}
+
+.form-radio-row {
+  display: flex;
+  gap: 18px;
+  padding: 6px 0;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.86rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+/* Results Output Card */
+.results-panel-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-xl);
+  padding: 28px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.results-header-box {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 20px;
+}
+
+.classification-tag-badge {
+  display: inline-flex;
+  padding: 5px 14px;
+  border-radius: var(--border-radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.classification-tag-badge.traditional {
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FCD34D;
+}
+
+.classification-tag-badge.novel {
+  background: #D1FAE5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+}
+
+.result-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.result-metric-box {
+  background: var(--bg-app);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-md);
+  padding: 14px;
+}
+
+.metric-box-title {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.metric-box-val {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.risk-pill {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--border-radius-full);
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.risk-pill.high {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+.risk-pill.medium {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.risk-pill.low {
+  background: #DCFCE7;
+  color: #166534;
+}
+
+@media (max-width: 900px) {
+  .formulation-view-grid {
+    grid-template-columns: 1fr;
+  }
+}

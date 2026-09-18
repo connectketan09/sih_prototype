@@ -1,0 +1,325 @@
+/* ==========================================================================
+   Page Styles: human-expert.css
+   ========================================================================== */
+@import url('common.css');
+
+.facilitator-stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #E8F5E9;
+  border: 1px solid var(--color-sage-border);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #1B5E20;
+}
+
+.expert-layout-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 24px;
+  margin-bottom: 30px;
+  align-items: start;
+}
+
+.expert-form-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-xl);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.card-head-title {
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 14px;
+}
+
+.card-head-title h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 4px;
+}
+
+.card-head-title p {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.escalation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-row-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-field label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.form-field .required {
+  color: #D32F2F;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  padding: 10px 14px;
+  border-radius: var(--border-radius-md);
+  border: 1.5px solid var(--border-subtle);
+  font-size: 0.88rem;
+  font-family: inherit;
+  color: var(--text-dark);
+  background: #FFFFFF;
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(13, 59, 40, 0.08);
+}
+
+.form-actions-row {
+  margin-top: 8px;
+}
+
+/* Pipeline Card */
+.expert-pipeline-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.active-ticket-box {
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-primary);
+  border-radius: var(--border-radius-xl);
+  padding: 22px;
+  box-shadow: var(--shadow-card);
+}
+
+.ticket-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.ticket-id-tag {
+  font-family: monospace;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  background: var(--bg-card);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--color-sage-border);
+}
+
+.ticket-subject {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 4px;
+}
+
+.ticket-meta {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+/* Escalation Stages Visualizer */
+.escalation-stages {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 20px;
+}
+
+.escalation-stages::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: var(--border-subtle);
+}
+
+.stage-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.stage-dot {
+  position: absolute;
+  left: -28px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.stage-item.completed .stage-dot {
+  background: #2E7D32;
+  border-color: #2E7D32;
+  color: #FFFFFF;
+}
+
+.stage-item.completed .stage-dot svg {
+  width: 12px;
+  height: 12px;
+}
+
+.stage-item.in-progress .stage-dot {
+  border-color: #E65100;
+  background: #FFF3E0;
+}
+
+.mini-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #E65100;
+  animation: pulseBadge 1.2s infinite;
+}
+
+.stage-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.stage-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.stage-time {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.ticket-actions-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+/* Facilitator Directory */
+.facilitator-directory {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius-xl);
+  padding: 20px;
+  box-shadow: var(--shadow-card);
+}
+
+.facilitator-directory h4 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 14px;
+}
+
+.facilitator-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.facilitator-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-card);
+  padding: 10px 14px;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.fac-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.82rem;
+  flex-shrink: 0;
+}
+
+.fac-info h5 {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 2px;
+}
+
+.fac-info span {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  display: block;
+}
+
+.recent-tickets-section {
+  margin-top: 10px;
+}
+
+.recent-tickets-section .section-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 14px;
+}
+
+@media (max-width: 1024px) {
+  .expert-layout-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-row-2, .form-row-3 {
+    grid-template-columns: 1fr;
+  }
+}
