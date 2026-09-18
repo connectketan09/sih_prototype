@@ -9,7 +9,7 @@ import logging
 
 import requests
 from dotenv import load_dotenv
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
 
@@ -67,6 +67,9 @@ BHASHINI_REQUEST_TIMEOUT = 30
 
 
 app = Flask(__name__)
+
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+FRONTEND_DIR = PROJECT_ROOT
 
 CORS(
     app,
@@ -670,6 +673,24 @@ def translate():
                 ),
             }
         ), 500
+
+
+@app.route("/", defaults={"path": ""})
+@app.route("/<path:path>")
+def serve_frontend(path):
+    if path.startswith("api/"):
+        return jsonify({
+            "success": False,
+            "error": "Endpoint not found."
+        }), 404
+
+    if path:
+        file_path = os.path.join(FRONTEND_DIR, path)
+
+        if os.path.isfile(file_path):
+            return send_from_directory(FRONTEND_DIR, path)
+
+    return send_from_directory(FRONTEND_DIR, "index.html")
 
 
 @app.errorhandler(404)
