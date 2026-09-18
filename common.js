@@ -660,7 +660,8 @@ async function callBhashiniTranslate(text, sourceLang, targetLang) {
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), 25000);
   try {
-    const res = await fetch('http://127.0.0.1:5050/api/translate', {
+    const _backendUrl = (window.IPSAKTI_CONFIG && window.IPSAKTI_CONFIG.BACKEND_URL) || 'http://127.0.0.1:5050';
+    const res = await fetch(_backendUrl + '/api/translate', {
       method: 'POST',
       signal: controller.signal,
       headers: { 'Content-Type': 'application/json' },

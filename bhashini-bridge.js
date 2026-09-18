@@ -35,8 +35,8 @@
 
 const BhashiniAPI = (() => {
 
-  // Backend base URL — matches Flask port in api_backend/app.py
-  const BACKEND_BASE_URL = 'http://127.0.0.1:5050';
+  // Backend base URL — reads from config.js (window.IPSAKTI_CONFIG), falls back to localhost
+  const BACKEND_BASE_URL = (window.IPSAKTI_CONFIG && window.IPSAKTI_CONFIG.BACKEND_URL) || 'http://127.0.0.1:5050';
 
   // Request timeout in milliseconds
   const REQUEST_TIMEOUT_MS = 35000;
